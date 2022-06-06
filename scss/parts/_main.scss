@@ -1,0 +1,65 @@
+@use "./components/_variables.scss"as values;
+
+main {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: -10;
+
+  background-image: url(../images/hero.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  &:after {
+    display: block;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(13, 22, 21, 0.25);
+    z-index: -9;
+  }
+
+  h1 { 
+    color: values.$main-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    font-size: 4.5em;
+
+    small {
+      display: block;
+      font-size: 0.5em;
+    }
+  }
+
+  #scroll {
+    color: values.$main-color;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+
+    &:after {
+      display: block;
+      content: "";
+      width: 1px;
+      height: 60px;
+      background-color: values.$main-color;
+      margin: auto;
+    }
+  }
+}

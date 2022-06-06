@@ -1,0 +1,23 @@
+@mixin spacing-none() {
+    padding: 0;
+    margin: 0;
+}
+
+// メディアクエリ
+@mixin pc {
+    @media( max-width: (1024px)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media( max-width: (768px)) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media( max-width: (480px)) {
+        @content;
+    }
+}

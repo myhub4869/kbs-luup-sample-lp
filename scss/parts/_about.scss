@@ -1,0 +1,46 @@
+@use "./components/_variables.scss" as values;
+@use "./components/_mixin.scss" as mixin;
+
+&#about {
+    background-color: values.$section-color;
+    margin-top: 25%;
+
+    h3 {
+        padding-bottom: 3em;
+        margin-top: -25%;
+    }
+
+    .row {
+        width: values.$content-width;
+        margin: 0 auto;
+
+        display: flex;
+        justify-content: space-between;
+
+        .col {
+            width: 24%;
+            text-align: center;
+            font-size: 1rem;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                aspect-ratio: 1/1;
+            }
+
+            h5 {
+                @include mixin.spacing-none;
+                margin-top: 0.5em;
+                line-height: 1.5;
+                font-weight: normal;
+                font-size: 1em;
+            }
+
+            .help {
+                @include mixin.spacing-none;
+                font-weight: normal;
+                font-size: 0.7em;
+            }
+        }
+    }
+}

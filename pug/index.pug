@@ -1,0 +1,139 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+    meta(name="viewport", content="initial-scale=1, width=device-width, viewport-fit=cover")
+
+    title LUUP（ループ） | 電動キックボードシェア/シェアサイクルアプリ
+
+    link(rel='stylesheet', href="css/style.css")
+
+  body
+    header#main_header
+      #logo
+        include components/svg/logo.svg
+      nav
+        ul
+          li
+            a(href="#") TOP
+          li
+            a(href="#about") ABOUT
+          li
+            a(href="#") HOW TO
+          li
+            a(href="#about_port") ポート設置
+          li
+            a(href="#") ニュース
+          li
+            a(href="#area") 設置場所
+          li
+            a(href="#") 採用情報
+
+    main#main_visual
+      h1 RIDE YOUR CITY
+        small 街じゅうが、スタート地点
+      #scroll Scroll
+
+    section#about
+      h3 街じゅうが、スタート地点
+
+      article.row
+        .col
+          img(src="/images/about/ab1-min.png", alt="", loading="auto")
+          h5
+            | 電動キックボード /
+            br
+            | 電動アシスト自転車を選べる
+          p.help
+            | ※エリアによって異なる場合がありますので
+            br
+            | 詳細はアプリをご確認ください
+
+        .col
+          img(src="/images/about/ab2-min.png", alt="", loading="auto")
+          h5
+            | ポートがたくさんあるから
+            br
+            | 短距離移動にぴったり
+
+        .col
+          img(src="/images/about/ab3-min.png", alt="電動キックボード", loading="auto")
+          h5
+            | 予約・決済もアプリひとつで
+            br
+            | ラクラク
+            br
+            | 基本料金50円 + 1分あたり
+            br
+            | 15円（税込）
+          p.help
+            | ※1分ごとに追加料金が発生します。
+            br
+            a(href="https://support.luup.sc/hc/ja/articles/360051196234",target="_blank") ヘルプ
+            | でご確認ください
+
+    section#area
+      h3 提供エリア拡大中！
+
+      p
+       | 展開エリアに高密度にポートを設置！
+       br
+       | アプリをダウンロードして、最寄りのポート（LUUP専用駐車場）を検索してみましょう！
+
+      #tokyo.area-map
+        .photo
+          .text-area
+            p TOYKO
+            p.ruby 東京
+            button ポート設置場所を確認
+        .map
+          img()
+
+      #osaka.area-map
+        .photo
+          .text-area
+            p OSAKA
+            p.ruby 大阪
+            button ポート設置場所を確認
+        .map
+          img()
+
+    section#interview
+      .row
+        .col.image
+          img(src="/images/interview/v1.jpg", alt="第1期 LUUPアンバサダー | 伊藤夏美さん")
+        .col.text-area
+          h5 第1期 LUUPアンバサダー | 伊藤夏美さん
+          p
+           | 電車に乗りたくない時や歩くのにはちょっと遠い距離で非常に便利でした。電動なので女性でも簡単に乗れます♪ アプリの登録も非常に簡単なので、誰でも簡単に試せるのも気軽でいいなと思いました！今後もっとポートが増えるのを楽しみにしてます◎
+
+      .row
+        .col.image
+          img(src="/images/interview/v2.jpg", alt="第1期 LUUPアンバサダー | 山下晃和さん")
+        .col.text-area
+          h5 第1期 LUUPアンバサダー | 山下晃和さん
+          p
+           | LUUPは通勤や買い物にとても便利です。例えば、雨が降っている朝は電車で行き、帰りに雨が止んでいたらLUUPで帰るなど、自分の自転車を使うよりも柔軟な対応ができます。また、満員電車を避けることができるのもお気に入りのポイントです。
+
+    section#app_info
+      #info_area
+        .app_icon
+          img(src="/images/app_info/sl.png")
+        .downloads
+          p.title ダウンロードはこちら
+          .download_icons
+            .ios
+              img(src="/images/app_info/ios.png")
+            .android
+              img(src="/images/app_info/android.png")
+          span.icon_info
+            | Apple および Apple ロゴは米国その他の国で登録された Apple Inc. の商標です。App Store は Apple Inc. のサービスマークです。
+            br
+            | Google Play および Google Play ロゴは Google LLC の商標です。
+
+    section#about_port
+    section#contact 
+    footer    
+
+    script(src="js/main.js")
