@@ -149,7 +149,42 @@ html(lang="ja")
 
       a.port_contact_btn(href="#") ポート設置のご相談はこちら
 
-    section#contact 
-    footer    
+    section#contact
+      h3 お問い合わせ
+        small Contact
+
+      form(action="#", method="post")
+        .row.type-text
+          label お名前
+          .required
+            span 必須
+          .input
+            input(type="text", name="name")
+
+        .row.type-text
+          label メールアドレス
+          .required
+            span 必須
+          .input
+            input(type="email", name="email")
+
+        .row.type-text
+          label 電話番号
+          .required
+            span 必須
+          .input
+            input(type="tel", name="phone")
+
+        .row.type-textarea
+          label お問い合わせ内容
+          .required
+            span 必須
+          .input
+            textarea(name="contact", rows="10") 
+
+        .row.type-submit
+          button(type="submit") 送信
+
+    footer
 
     script(src="js/main.js")

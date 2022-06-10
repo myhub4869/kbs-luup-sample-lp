@@ -1,0 +1,89 @@
+@use "./components/_variables.scss" as values;
+@use "./components/_mixin.scss" as mixin;
+
+&#contact {
+    background: linear-gradient(to right, #edf7f2, #eee);
+
+    h3 {
+        box-sizing: border-box;
+        border-left: 2px solid #00afa8;
+        padding-top: 0.5em;
+        padding-left: 1em;
+
+        small {
+            color: #00afa8;
+            display: block;
+            font-size: 0.6em;
+        }
+    }
+
+    form {
+        width: values.$content-width;
+        margin: 3em auto 0;
+
+        .type-text {
+            --align-items: center;
+        }
+        .type-textarea {
+            --align-items: flex-start;
+        }
+    
+        .row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: center;
+            align-items: var(--align-items);
+
+            &:not(:first-child) {
+                margin-top: 1em;
+            }
+
+            label {
+                flex-basis: 20%;
+                text-align: right;
+                padding: 0.1rem 0;
+            }
+
+            .required {
+                flex-basis: 4%;
+                text-align: center;
+                padding: 0.1rem 0;
+
+                span {
+                    display: block;
+                    font-size: 0.7em;
+                    color: white;
+                    background: rgb(238, 74, 117);
+                    padding: 0.2em;
+                    margin-left: 0.5em;
+                }
+            }
+
+            .input {
+                padding: 0.1rem 0;
+                border-left: 1px solid black;
+                padding-left: 1em;
+                margin-left: 1em;
+                flex-grow: 1;
+
+                input , textarea {
+                    width: 100%;
+                    border: 1px solid rgb(185, 185, 185);
+                    border-radius: 2px;
+                    font-size: 1.4em;
+                    resize: none;
+                }
+            }
+
+            button {
+                color: #00afa8;
+                border: 2px solid #00afa8;
+                background: white;
+                padding: .5em 7em;
+                border-radius: 5px;
+            }
+        }
+    }
+}
