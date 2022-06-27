@@ -2,8 +2,6 @@
 
 @use "../node_modules/normalize.css/normalize.css";
 
-@use "./parts/_header.scss";
-@use "./parts/_main.scss";
 
 body {
     font-family: "Noto Sans JP", Avenir, "Helvetica Neue", Helvetica, Arial, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", 游ゴシック, YuGothic, メイリオ, Meiryo, sans-serif;
@@ -16,6 +14,9 @@ body {
             height: 100%;
         }
     }
+
+    @import "./parts/_header.scss";
+    @import "./parts/_main.scss";
 
     section {
         width: 100vw;
@@ -35,4 +36,6 @@ body {
         @import "./parts/_about_port.scss";
         @import "./parts/_contact.scss";
     }
+
+    @import "./parts/_footer.scss";
 }
